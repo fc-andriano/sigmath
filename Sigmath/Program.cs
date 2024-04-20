@@ -11,7 +11,7 @@ namespace Sigmath
 	{
 		public static int Main(string[] args)
 		{
-			CodeGenerator g = CodeGenerator.CreateInGlobalContext();
+			Generator g = Generator.CreateInGlobalContext();
 
 			Fraction f1 = (3, 2), f2 = (1, 2), f3 = f1 % f2;
 

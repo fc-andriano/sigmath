@@ -1,4 +1,4 @@
-﻿namespace Sigmath.Parse.Abstract
+﻿namespace Sigmath.Abstract
 {
 	public abstract class Statement
 	{

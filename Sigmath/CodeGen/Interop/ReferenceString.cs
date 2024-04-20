@@ -2,10 +2,11 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
+using Sigmath.CodeGen.Extensions;
 
 namespace Sigmath.CodeGen.Interop
 {
-	public unsafe delegate sbyte* UnmarshalerFunc<T>(T* arg, nuint* length)
+    public unsafe delegate sbyte* UnmarshalerFunc<T>(T* arg, nuint* length)
 		where T : unmanaged;
 
 	[DebuggerDisplay($"{{{nameof(this.GetDebuggerDisplay)}(), nq}}")]

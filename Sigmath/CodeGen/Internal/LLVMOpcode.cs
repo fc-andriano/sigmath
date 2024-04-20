@@ -1,4 +1,4 @@
-﻿namespace Sigmath.CodeGen
+﻿namespace Sigmath.CodeGen.Internal
 {
 	internal enum LLVMOpcode :
 		byte

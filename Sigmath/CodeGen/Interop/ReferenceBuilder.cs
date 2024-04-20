@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Sigmath.CodeGen.Extensions;
+using Sigmath.CodeGen.Internal;
+
+using System;
 using System.Diagnostics;
 
 namespace Sigmath.CodeGen.Interop
 {
-	[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(), nq}}")]
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(), nq}}")]
 	public unsafe readonly struct ReferenceBuilder(void* ptr) :
 		IDisposable, IEquatable<ReferenceBuilder>, IReference
 	{

@@ -1,6 +1,8 @@
-﻿namespace Sigmath.CodeGen.Interop
+﻿using Sigmath.CodeGen.Extensions;
+
+namespace Sigmath.CodeGen.Interop
 {
-	internal interface IReference
+    internal interface IReference
 	{
 		/* =---- Static Methods ----------------------------------------= */
 

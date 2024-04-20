@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using Sigmath.CodeGen.Extensions;
 
 namespace Sigmath.CodeGen.Interop
 {
-	[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(), nq}}")]
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(), nq}}")]
 	public unsafe readonly struct ReferenceValue(void* ptr) :
 		IEquatable<ReferenceValue>, IReference, IReferenceDump
 	{

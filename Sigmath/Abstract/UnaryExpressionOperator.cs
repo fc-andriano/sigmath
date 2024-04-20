@@ -1,4 +1,4 @@
-﻿namespace Sigmath.Parse.Abstract
+﻿namespace Sigmath.Abstract
 {
 	public enum UnaryExpressionOperator :
 		byte
@@ -7,11 +7,6 @@
 
 		Positive,
 		Negative,
-
-		// --------------------------------------------------------------
-
-		Increment,
-		Decrement,
 
 		/* =------------------------------------------------------------= */
 	}

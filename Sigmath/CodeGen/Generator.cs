@@ -1,18 +1,19 @@
-﻿using Sigmath.CodeGen.Interop;
+﻿using Sigmath.CodeGen.Internal;
+using Sigmath.CodeGen.Interop;
 
 using System.Diagnostics;
 
 namespace Sigmath.CodeGen
 {
 	[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(), nq}}")]
-	public sealed class CodeGenerator
+	public sealed class Generator
 	{
 		private readonly ReferenceContext _context;
 		private readonly ReferenceBuilder _builder;
 
 		/* =---- Constructors ------------------------------------------= */
 
-		private CodeGenerator(ReferenceContext context, ReferenceBuilder builder)
+		private Generator(ReferenceContext context, ReferenceBuilder builder)
 		{
 			_context = context;
 			_builder = builder;
@@ -20,13 +21,13 @@ namespace Sigmath.CodeGen
 
 		/* =---- Static Methods ----------------------------------------= */
 
-		public static CodeGenerator Create(ReferenceContext context)
+		public static Generator Create(ReferenceContext context)
 			=> new(context, context.CreateBuilder());
 
-		public static CodeGenerator Create()
+		public static Generator Create()
 			=> Create(ReferenceContext.Create());
 
-		public static CodeGenerator CreateInGlobalContext()
+		public static Generator CreateInGlobalContext()
 			=> Create(ReferenceContext.Global);
 
 		/* =---- Methods -----------------------------------------------= */
